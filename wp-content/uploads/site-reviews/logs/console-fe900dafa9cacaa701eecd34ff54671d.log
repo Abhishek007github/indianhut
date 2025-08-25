@@ -1,0 +1,42 @@
+[2025-08-13 21:45:27] ERROR [Database:216] Can&#039;t create table `wordpress`.`wp_glsr_assigned_posts` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2025-08-13 21:45:27] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\helpers.php:246] Array (
+    [0] =&gt; Array (
+        [file] =&gt; C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 246
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 217
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 86
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 38
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedPosts.php
+        [line] =&gt; 16
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2025-08-13 21:45:27] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:112] cache::flushing [all]
+[2025-08-13 21:45:29] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:112] cache::flushing [all]
+[2025-08-13 21:48:38] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:112] cache::flushing [all]
+[2025-08-13 21:48:57] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:112] cache::flushing [all]
+[2025-08-13 21:48:58] DEBUG [C:\xampp\htdocs\wordpress\wp-content\plugins\site-reviews\plugin\Integrations\Cache\Controller.php:112] cache::flushing [all]
+[2025-08-13 21:49:46] WARNING [Commands\DeactivatePlugin:29] Deactivation reason missing.

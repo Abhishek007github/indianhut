@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Your Gift Card</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #222;
+      font-family: open, sans-serif;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Center the form popup */
+    .popup-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 20px 32px rgba(0, 0, 0, 0.2);
+      width: 50%;
+      max-width: 90vw;
+      padding: 40px 55px 30px 55px;
+      position: relative;
+      animation: popup-in 0.3s;
+    }
+
+    @keyframes popup-in {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      color: #d00;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+      color: #e62e2e;
+      font-family: Impact, Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .form-field {
+      margin-bottom: 18px;
+    }
+
+    .form-field input[type="text"],
+    .form-field input[type="email"] {
+      width: 100%;
+      padding: 12px 8px;
+      border: 1px solid #e62e2e;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      margin-top: 5px;
+    }
+
+    .form-field input[type="text"]:focus,
+    .form-field input[type="email"]:focus {
+      border-color: #333;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      margin-right: 9px;
+      width: 18px;
+      height: 18px;
+      accent-color: #e62e2e;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #111;
+      color: #fff;
+      padding: 13px 0;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .submit-btn:hover {
+      background: #e62e2e;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media(max-width:600px) {
+      .popup {
+        padding: 25px 8px;
+        width: 97vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup-bg" id="popup-bg">
+    <div class="popup">
+      <button class="close-btn" onclick="closePopup()">×</button>
+      <div class="title">BUY YOUR GIFT CARD</div>
+      <form id="giftcard-form" autocomplete="off">
+        <div class="form-field">
+          <input type="text" placeholder="Name" name="name" required>
+        </div>
+        <div class="form-field">
+          <input type="email" placeholder="Email Address" name="email" required>
+        </div>
+        <div class="form-field">
+          <input type="text" placeholder="Fill your gift amount" name="amount" required>
+        </div>
+        <div class="form-field">
+          <input type="text" placeholder="Address" name="address" required>
+        </div>
+        <label class="checkbox-label">
+          <input type="checkbox" name="receive-at-home">
+          Would you like to receive your gift card at your home address?
+        </label>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function closePopup() {
+      document.getElementById('popup-bg').style.display = 'none';
+    }
+    // Prevent real submission
+    document.getElementById('giftcard-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you! (Form submitted)');
+      closePopup();
+    });
+  </script>
+</body>
+
+</html>
